@@ -1,16 +1,14 @@
 <%= simple_form_for(@appointment) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :start_time %>
-    <%= f.input :date %>
-    <%= f.input :length %>
-    <%= f.input :open %>
-    <%= f.input :patient_birthdate %>
-    <%= f.input :patient_name %>
-    <%= f.input :doctor_id, collection: Doctor.all, 
-      label_method: :name, value_method: :id %>
-  </div>
+  <ul class="form-inputs">
+    <li><%= @appointment.start_time %></li>
+    <li><%= @appointment.date %></li>
+    <li><%= @appointment.length %></li>
+    <li><%= @appointment.open %></li>
+    <li><%= f.input :patient_birthdate %></li>
+    <li><%= f.input :patient_name %></li>
+  </ul>
 
   <div class="form-actions">
     <%= f.button :submit %>
