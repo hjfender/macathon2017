@@ -9,6 +9,9 @@ class AppointmentsController < ApplicationController
       @appointment = @appointment.public_send(key, value) if value.present?
     end
   end
+  
+  def search(search_medicare, search_slider, search_specialty, search_distance)
+    return scoped unless search_medicare.present? || search_slider.preset? || search_specialty.present? || 
 
 
   # GET /appointments/1
