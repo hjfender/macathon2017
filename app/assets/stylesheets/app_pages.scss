@@ -6,6 +6,12 @@
 body {
     background-color: #6e9ecf !important;
 }
+.logo {
+    width: 250px;
+}
+.logo2 {
+    width: 42px;
+}
 .jumbotron {
     margin-top: 10%;
 }
@@ -20,6 +26,7 @@ body {
     display: flex !important;
 }
 .btn-group .btn {
+    background-color:#ff5733 !important;
     border-radius: 0;
     margin-left: -1px;
 }

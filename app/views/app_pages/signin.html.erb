@@ -1,3 +1,15 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <!--<a class="navbar-brand" href="#">Brand</a>-->
+      <a class="navbar-left" href="#">
+        <%=image_tag ("ConneXt.png"), :class => "logo" %>
+        <!--<img src="assets/">-->
+      </a>
+    </div>
+</nav>
+
 <div class="jumbotron col-sm-offset-4 col-sm-4">
     <div class="container">
     
@@ -15,4 +27,15 @@
         <%= link_to "Sign in", app_pages_filter_url, {:style =>'color:#FFFFFF;', :class=> "btn btn-lg btn-primary btn-block"} %>
       </form>
     </div>
+</div>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+  <div class = "container">
+    <%=image_tag ("X.png"), :class => "logo2 pull-right", :display=>"inline-block" %>
+    <p class="navbar-text pull-left" display="inline-block">© 2017 - D@M:AS.</p>
+  </div>
+  <!--<div class="container">-->
+  <!--  <a class="pull-right" href="#"> -->
+  <!--    <%=image_tag ("X.png"), :class => "logo2 pull-right", :display=>"inline-block" %>-->
+  <!--</div> -->
 </div>
