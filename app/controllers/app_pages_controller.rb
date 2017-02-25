@@ -12,6 +12,7 @@ class AppPagesController < ApplicationController
   def book
     @organizations = Organization.all
     @doctors = Doctor.all
+    @doctor = Doctor.find(1)
     @appointments = Appointment.all
   end
 end
