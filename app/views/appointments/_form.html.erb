@@ -1,0 +1,16 @@
+<%= simple_form_for(@appointment) do |f| %>
+  <%= f.error_notification %>
+
+  <ul class="form-inputs" style="list-style-type: none">
+    <li><%= @appointment.start_time %></li>
+    <li><%= @appointment.date %></li>
+    <li><%= @appointment.length %></li>
+    <li><%= @appointment.open %></li>
+    <li><%= f.input :patient_birthdate, start_year: Date.today.year - 110, end_year: Date.today.year  %></li>
+    <li><%= f.input :patient_name %></li>
+  </ul>
+
+  <div class="form-actions">
+    <%= f.button :submit, :style => "margin-left: 40px", :value => "Submit  Appointment" %>
+  </div>
+<% end %>
