@@ -23,3 +23,5 @@ Doctor.create(name: 'Doctor Mingkwan', gender: 'F', specialty: 'Cardiology', org
 Doctor.create(name: 'Doctor Gupta', gender: 'F', specialty: 'Psychology', organization_id: 3)
 Doctor.create(name: 'Doctor Fender', gender: 'M', specialty: 'Homeopath', organization_id: 3)
 Doctor.create(name: 'Doctor Gerdes', gender: 'F', specialty: 'Pathology', organization_id: 3)
+
+Appointment.create(start_time: 8, date: Date.new(2017, 28, 2), length: 1, open: true, doctor_id: 1)
