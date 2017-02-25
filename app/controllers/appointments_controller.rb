@@ -18,6 +18,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    @doctors = Doctor.all
+    @organizations = Organization.all
     respond_to do |format|
       format.html
       format.pdf do
@@ -56,7 +58,7 @@ class AppointmentsController < ApplicationController
   def update
     respond_to do |format|
       if @appointment.update(appointment_params)
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
+        format.html { redirect_to appointment_url+".pdf", notice: 'Appointment was successfully updated.' }
         format.json { render :show, status: :ok, location: @appointment }
       else
         format.html { render :edit }

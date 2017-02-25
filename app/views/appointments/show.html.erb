@@ -1,6 +1,16 @@
 <!--<p id="notice"><%= notice %></p>-->
 
 <p>
+  <strong>Organization:</strong>
+  <%= @organizations.find(@doctors.find(@appointment.doctor_id).organization_id).name%>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @doctors.find(@appointment.doctor_id).name %>
+</p>
+
+<p>
   <strong>Start time:</strong>
   <%= @appointment.start_time %>
 </p>
@@ -10,20 +20,20 @@
   <%= @appointment.date %>
 </p>
 
-<p>
-  <strong>Length:</strong>
-  <%= @appointment.length %>
-</p>
+<!--<p>-->
+<!--  <strong>Length:</strong>-->
+<!--  <%= @appointment.length %>-->
+<!--</p>-->
 
-<p>
-  <strong>Open:</strong>
-  <%= @appointment.open %>
-</p>
+<!--<p>-->
+<!--  <strong>Open:</strong>-->
+<!--  <%= @appointment.open %>-->
+<!--</p>-->
 
-<p>
-  <strong>Patient birthdate:</strong>
-  <%= @appointment.patient_birthdate %>
-</p>
+<!--<p>-->
+<!--  <strong>Patient birthdate:</strong>-->
+<!--  <%= @appointment.patient_birthdate %>-->
+<!--</p>-->
 
 <p>
   <strong>Patient name:</strong>
