@@ -2,7 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body {
+    background-color: #337ab7 !important;
+}
+.jumbotron {
+    margin-top: 10%;
+}
+.search-field {
     padding-top: 50px;
 }
 .dropdown.dropdown-lg .dropdown-menu {
