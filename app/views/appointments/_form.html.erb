@@ -8,6 +8,8 @@
     <%= f.input :open %>
     <%= f.input :patient_birthdate %>
     <%= f.input :patient_name %>
+    <%= f.input :doctor_id, collection: Doctor.all, 
+      label_method: :name, value_method: :id %>
   </div>
 
   <div class="form-actions">
