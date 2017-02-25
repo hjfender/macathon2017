@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  takes_medicare: false
+  location: MyString
+  sliding_scale: false
+
+two:
+  name: MyString
+  takes_medicare: false
+  location: MyString
+  sliding_scale: false

@@ -46,6 +46,9 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'simple_form'
+
 group :production do
   gem 'pg', '0.18.4'
 end
