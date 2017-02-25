@@ -4,6 +4,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
+    @doctors = Doctor.where(nil)
     @appointments = Appointment.where(nil)
     filtering_params(params).each do |key, value|
       @appointment = @appointment.public_send(key, value) if value.present?
