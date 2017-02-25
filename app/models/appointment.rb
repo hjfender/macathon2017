@@ -4,5 +4,5 @@ class Appointment < ActiveRecord::Base
     scope :medicare, -> { where(doctor.organization.takes_medicare :true) }
     scope :slider, -> { where(doctor.organization.sliding_scale :true) }
     scope :specialty, -> { where(doctor.specialty :specialty) }
-    scope :distance, (distance) -> { where(doctor.organization.distance < distance) }
+    scope :distance, -> (distance) { where("doctor.organization.distance < ?", params[:distance]) }
 end
