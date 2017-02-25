@@ -10,8 +10,9 @@ class AppointmentsController < ApplicationController
     end
   end
   
-  def search(search_medicare, search_slider, search_specialty, search_distance)
-    return scoped unless search_medicare.present? || search_slider.preset? || search_specialty.present? || 
+  # def search(search_medicare, search_slider, search_specialty, search_distance)
+  #   return scoped unless search_medicare.present? || search_slider.preset? || search_specialty.present? || search_distance.present?
+  #   where()
 
 
   # GET /appointments/1
