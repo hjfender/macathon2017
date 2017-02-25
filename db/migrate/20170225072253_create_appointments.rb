@@ -7,6 +7,7 @@ class CreateAppointments < ActiveRecord::Migration
       t.boolean :open
       t.date :patient_birthdate
       t.string :patient_name
+      # t.string :language
       t.references :doctor
 
       t.timestamps null: false
