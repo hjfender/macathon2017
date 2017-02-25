@@ -9,11 +9,21 @@ class AppointmentsController < ApplicationController
       @appointment = @appointment.public_send(key, value) if value.present?
     end
   end
+  
+  # def search(search_medicare, search_slider, search_specialty, search_distance)
+  #   return scoped unless search_medicare.present? || search_slider.preset? || search_specialty.present? || search_distance.present?
+  #   where()
 
 
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render :pdf => "Appointment.pdf", :template => "appointments/show.html.erb"
+      end
+    end
   end
 
   # GET /appointments/new
