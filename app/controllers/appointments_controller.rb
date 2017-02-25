@@ -4,8 +4,12 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.where(nil)
+    filtering_params(params).each do |key, value|
+      @appointment = @appointment.public_send(key, value) if value.present?
+    end
   end
+
 
   # GET /appointments/1
   # GET /appointments/1.json
@@ -60,6 +64,10 @@ class AppointmentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def book
+    @appointment.close
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -70,5 +78,10 @@ class AppointmentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
       params.require(:appointment).permit(:start_time, :date, :length, :open, :patient_birthdate, :patient_name, :doctor_id)
+    end
+    
+    # A list of param names that can be used for filtering
+    def filtering_params(params)
+      params.slice(:medicare, :slider, :specialty, :distance)
     end
 end
