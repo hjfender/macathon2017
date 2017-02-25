@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'app_pages/filter'
+
+  get 'app_pages/book'
+
   resources :appointments
   resources :doctors
   resources :organizations
-  root 'application#basic'
+  root 'application#hello'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
