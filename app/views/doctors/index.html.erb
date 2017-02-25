@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Gender</th>
       <th>Specialty</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @doctors.each do |doctor| %>
       <tr>
+        <td><%= doctor.name %></td>
         <td><%= doctor.gender %></td>
         <td><%= doctor.specialty %></td>
         <td><%= link_to 'Show', doctor %></td>
