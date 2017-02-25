@@ -14,6 +14,12 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render :pdf => "Appointment.pdf", :template => "appointments/show.html.erb"
+      end
+    end
   end
 
   # GET /appointments/new
